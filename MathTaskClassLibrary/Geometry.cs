@@ -20,7 +20,7 @@ namespace MathTaskClassLibrary
                 throw new ArgumentException();
             }
             string str = "";
-            for (char c = 'A'; c < 'A' + n; c++)
+            for (char c = 'A'; c < 'A' + n; c++) 
             {
                 str += c;
             }
@@ -86,7 +86,7 @@ namespace MathTaskClassLibrary
     }
     public class Regular
     {
-        Regex regex = new Regex(@"^[\w\-]+@((\w+)|(\w[\w-]+))\.\w+$");
+        Regex regex = new Regex(@"^[a-zA-Z]\w{3,20}@[a-z]{2,10}\.[a-z]{2,5}");
         public bool Email(string line)
         {
             return regex.IsMatch(line);
