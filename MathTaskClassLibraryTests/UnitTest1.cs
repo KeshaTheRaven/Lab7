@@ -184,6 +184,25 @@ namespace MathTaskClassLibraryTests
             }
             Assert.IsTrue(cathed);
         }
+        [TestMethod]
+        public void Year4()
+        {
+            int year = 2000;
+            Visokos v = new Visokos(year);
+            int actual = v.NumDays(year);
+            int expected = 366;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Year5()
+        {
+            int year = 1900;
+            Visokos v = new Visokos(year);
+            int actual = v.NumDays(year);
+            int expected = 365;
+            Assert.AreEqual(expected, actual);
+        }
     }
     [TestClass]
     public class RegularTest

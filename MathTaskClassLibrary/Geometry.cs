@@ -42,8 +42,8 @@ namespace MathTaskClassLibrary
             double D = b * b - (4 * a * c);
             if (D > 0)
             {
-                double x1 = (-b + Math.Sqrt(D)) / 2;
-                double x2 = (-b - Math.Sqrt(D)) / 2;
+                double x1 = (-b + Math.Sqrt(D)) / 2 * a;
+                double x2 = (-b - Math.Sqrt(D)) / 2 * a;
                 Math.Round(x1, 2);
                 Math.Round(-x2, 2);
                 return new double[] { x1, x2 };
